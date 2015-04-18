@@ -3,8 +3,9 @@ import {app} from 'appModule.js';
 
 class AppController {
 
-  constructor($rootScope) {
+  constructor($timeout) {
 
+    var digestQueued = false;
     var worker = null;
 
     var vm = this;
@@ -46,9 +47,15 @@ class AppController {
     }
 
     function onWorkerData(event){
-      $rootScope.$apply(function(){
-        vm.primes.unshift(event.data);
-      });
+      vm.primes.unshift(event.data);
+      if(!digestQueued) {
+        digestQueued = true;
+        $timeout(triggerDigest,100);
+      }
+    }
+
+    function triggerDigest() {
+      digestQueued = false;
     }
 
     function onError(error){
@@ -58,6 +65,6 @@ class AppController {
   }
 }
 
-AppController.$inject = ['$rootScope'];
+AppController.$inject = ['$timeout'];
 
 app.controller('AppController', AppController);
