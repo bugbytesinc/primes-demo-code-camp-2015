@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NOVA Code Camp 2015 ES6 with Angular Prime Numbers Demo">
+  <meta name="author" content="BugBytes Inc.">
+  <title>Prime Number Generator</title>
+  <link type="text/css" rel="stylesheet" media="all" href="css/main.css">
+</head>
+<body>
+  <div class="input">Get Prime numbers up to <input ng-model="vm.limit" type="number"/><button ng-click="vm.onCompute()">Go</button><button ng-click="vm.onClear()">Clear</button></div>
+  <ul class="output ng-cloak" ng-cloak>
+    <li ng-repeat="prime in vm.primes">{{prime}}</li>
+  </ul>
+  <script src="lib/angular.js"></script>
+  <script src="lib/traceur.js"></script>
+</body>
+</html>

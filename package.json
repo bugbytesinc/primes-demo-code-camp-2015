@@ -1,0 +1,23 @@
+{
+  "name": "Primes",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Prime Number Generator ES6 Demo for NOVA Code Camp 2015",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "BugBytes, Inc.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bugbytesinc/primes-demo-code-camp-2015.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-connect": "^2.0.6",
+    "gulp-plumber": "^1.0.0",
+    "gulp-jshint": "^1.9.4",
+    "gulp-csslint": "^0.1.5"
+  }
+}
