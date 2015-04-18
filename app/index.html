@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-controller="AppController as vm">
 <head lang="en">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,5 +15,13 @@
   </ul>
   <script src="lib/angular.js"></script>
   <script src="lib/traceur.js"></script>
+  <script>
+    window.System = new traceur.runtime.BrowserTraceurLoader();
+    System.map = System.semverMap(System.version);
+    System.baseURL = window.location.href + 'script/';
+    System.import('start.js').catch(function(ex) {
+      console.error('Internal Error ', ex.stack || ex);
+    });
+  </script>
 </body>
 </html>
