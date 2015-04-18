@@ -24,7 +24,7 @@ $ npm install -g gulp
 After that, clone the Column Study Repository and install the npm libaries:
 
 ```sh
-$ git clone https://github.com/bugbytesinc/code-camp-2015/primes-demo.git primes
+$ git clone https://github.com/bugbytesinc/primes-demo-code-camp-2015.git primes
 $ cd primes
 $ npm install
 ```
