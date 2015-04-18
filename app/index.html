@@ -17,6 +17,11 @@
   <script src="lib/angular.js"></script>
   <script src="lib/traceur.js"></script>
   <script>
+    // There are potentially other ways to bootstrap traceur, this method
+    // replicates how the traceur-compiler project bootstraps their
+    // REPL demo page.  A future version of traceur may change how this
+    // works, please check the traceur-compiler repl if you have problems.
+    // http://google.github.io/traceur-compiler/demo/repl.html#
     window.System = new traceur.runtime.BrowserTraceurLoader();
     System.map = System.semverMap(System.version);
     System.baseURL = window.location.href + 'script/';
