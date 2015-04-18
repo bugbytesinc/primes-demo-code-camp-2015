@@ -12,6 +12,7 @@
   <div class="input">Get Prime numbers up to <input ng-model="vm.limit" type="number"/><button ng-click="vm.onCompute()">Go</button><button ng-click="vm.onClear()">Clear</button></div>
   <ul class="output ng-cloak" ng-cloak>
     <li ng-repeat="prime in vm.primes">{{prime}}</li>
+    <li ng-if="vm.primes.length&gt;=500">...</li>
   </ul>
   <script src="lib/angular.js"></script>
   <script src="lib/traceur.js"></script>

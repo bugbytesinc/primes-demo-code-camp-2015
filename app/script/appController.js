@@ -48,6 +48,9 @@ class AppController {
 
     function onWorkerData(event){
       vm.primes.unshift(event.data);
+      if(vm.primes.length>500) {
+        vm.primes.pop();
+      }
       if(!digestQueued) {
         digestQueued = true;
         $timeout(triggerDigest,100);
